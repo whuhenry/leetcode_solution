@@ -8,16 +8,16 @@ class Solution:
                 flags[ord(ch) - ord('a')] += 1
             for i in range(26):
                 if flags[i] > 0:
-                    fqueries.append(i)
+                    fqueries.append(flags[i])
                     break
-        
+
         for word in words:
             flags = [0 for i in range(26)]
             for ch in word:
-                flags[ch - 'a'] += 1
+                flags[ord(ch) - ord('a')] += 1
             for i in range(26):
                 if flags[i] > 0:
-                    fwords.append(i)
+                    fwords.append(flags[i])
                     break
 
         result = []
@@ -28,4 +28,3 @@ class Solution:
                     count += 1
             result.append(count)
         return result
-        
