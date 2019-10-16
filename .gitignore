@@ -2,3 +2,5 @@
 vs/
 
 testapp/
+.idea/
+tmp.py
