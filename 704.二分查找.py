@@ -1,0 +1,27 @@
+#
+# @lc app=leetcode.cn id=704 lang=python3
+#
+# [704] 二分查找
+#
+
+from typing import List
+
+# @lc code=start
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        head = 0
+        tail = len(nums)
+        while head <= tail:
+            center = (head + tail) // 2
+            if center >= len(nums) or center < 0:
+                break
+            if nums[center] == target:
+                return center
+            elif nums[center] < target:
+                head = center + 1
+            else:
+                tail = center - 1
+        return -1
+
+# @lc code=end
+
