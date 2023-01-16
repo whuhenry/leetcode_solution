@@ -14,4 +14,3 @@ class Solution:
             n = math.ceil(n / 2)
         return result
 # @lc code=end
-
